@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include<bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+ 
+ 
+int main()
+{
+    int t;
+    cin>> t;
+    
+    while(t--)
+   {
+     string s1;
+     string s2;
+     cin>> s1;
+     cin >> s2;
+     int l=0;int o=0;int b=0;
+     for(int i=0;i<3;i++)
+     { 
+         if((s1.at(i)=='o'&& s2.at(i)=='b') || (s1.at(i)=='b'&&s2.at(i)=='o'))
+         {
+            l++;continue; 
+         }
+         else if(s1.at(i)=='b'||s2.at(i)=='b')
+         {b++;continue; }
+         else if(s1.at(i)=='o'||s2.at(i)=='o')
+         {o++;
+         continue;}
+     }  
+         if((o==0&&b==0 &&l==3)||(o==1&&b==1&&l==1)||(o==0&&b==1 &&l==2)||(o==0&&b==2 &&l==1)||(o==1&&b==0 &&l==2)||(o==1&&b==2&&l==0))
+         std::cout << "yes" << std::endl;
+         else
+         std::cout << "no" << std::endl;
+     
+         
+        
+   }
+} 
